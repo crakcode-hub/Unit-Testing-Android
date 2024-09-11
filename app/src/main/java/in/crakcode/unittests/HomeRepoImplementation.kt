@@ -9,7 +9,6 @@ class HomeRepoImplementation : HomeRepo {
 
     override fun saveUserData(user: User): Boolean {
         // save user data
-
         return true
     }
 }

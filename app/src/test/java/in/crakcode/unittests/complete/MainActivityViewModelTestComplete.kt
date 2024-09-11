@@ -75,7 +75,7 @@ class MainActivityViewModelTestComplete {
         val spyViewModel = MainActivityViewModel(spyRepo)
 
 
-        val mockUser = User("abc", "John Doe", 12)
+        val mockUser = User("UserId", "Vinit", 27)
         every { spyRepo.getUserData() } returns mockUser
 
         val result = spyViewModel.getUserDetails()

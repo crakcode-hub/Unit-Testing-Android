@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import `in`.crakcode.unittests.User
 import `in`.crakcode.unittests.usecases.UserUseCase
 
-class MainActivityViewModelWithUseCaseAndRepo(private val useCase: UserUseCase) : ViewModel() {
+class MainActivityViewModelWithUseCase(private val useCase: UserUseCase) : ViewModel() {
 
     fun getUserDetails(): User? {
         return useCase.fetchUserData()
