@@ -1,6 +1,6 @@
 package `in`.crakcode.unittests.complete
 
-import `in`.crakcode.unittests.HomeRepo
+import `in`.crakcode.unittests.repo.HomeRepo
 import `in`.crakcode.unittests.viewmodel1.MainActivityViewModel
 import `in`.crakcode.unittests.User
 import org.junit.Test

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -17,6 +18,13 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += mapOf(
+                    "room.schemaLocation" to "$projectDir/schemas"
+                )
+            }
         }
     }
 
@@ -59,6 +67,15 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.test:core-ktx:1.6.1")
+
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
 
     // test
     testImplementation("junit:junit:4.13.2")
@@ -67,13 +84,30 @@ dependencies {
     testImplementation ("androidx.arch.core:core-testing:2.2.0")
 
     // api test
-    testImplementation ("com.squareup.okhttp3:mockwebserver:4.9.1")
+    testImplementation ("com.squareup.okhttp3:mockwebserver:4.11.0")
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
 
     // compose ui test
-    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.6.7")
-    debugImplementation ("androidx.compose.ui:ui-test-manifest:1.6.7")
+    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.7.0")
+    debugImplementation ("androidx.compose.ui:ui-test-manifest:1.7.0")
+
+
+    // Room dependencies
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1") // For Kotlin projects
+
+// Room Testing
+    testImplementation ("androidx.room:room-testing:2.6.1")
+    androidTestImplementation ("androidx.room:room-testing:2.6.1")
+
+// Optional - For Kotlin Coroutines support in Room
+    implementation ("androidx.room:room-ktx:2.6.1")
+
+    // MockWebServer for network API testing
+    testImplementation ("com.squareup.okhttp3:mockwebserver:4.11.0")
+
 
 
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

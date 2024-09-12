@@ -1,4 +1,4 @@
-package `in`.crakcode.unittests.viewmodel2
+package `in`.crakcode.unittests.viewmodel1
 
 import androidx.lifecycle.ViewModel
 import `in`.crakcode.unittests.User

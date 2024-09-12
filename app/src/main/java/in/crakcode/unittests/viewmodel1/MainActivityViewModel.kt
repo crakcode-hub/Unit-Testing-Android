@@ -1,7 +1,7 @@
 package `in`.crakcode.unittests.viewmodel1
 
 import androidx.lifecycle.ViewModel
-import `in`.crakcode.unittests.HomeRepo
+import `in`.crakcode.unittests.repo.HomeRepo
 import `in`.crakcode.unittests.User
 
 class MainActivityViewModel (val repo: HomeRepo) : ViewModel() {

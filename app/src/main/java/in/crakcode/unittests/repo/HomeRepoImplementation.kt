@@ -1,4 +1,6 @@
-package `in`.crakcode.unittests
+package `in`.crakcode.unittests.repo
+
+import `in`.crakcode.unittests.User
 
 
 class HomeRepoImplementation : HomeRepo {

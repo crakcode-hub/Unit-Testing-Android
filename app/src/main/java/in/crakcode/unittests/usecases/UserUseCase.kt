@@ -1,6 +1,6 @@
 package `in`.crakcode.unittests.usecases
 
-import `in`.crakcode.unittests.HomeRepo
+import `in`.crakcode.unittests.repo.HomeRepo
 import `in`.crakcode.unittests.User
 
 class UserUseCase(private val repo: HomeRepo) {

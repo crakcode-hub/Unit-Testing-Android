@@ -1,4 +1,4 @@
-package `in`.crakcode.unittests
+package `in`.crakcode.unittests.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

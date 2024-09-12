@@ -1,14 +1,14 @@
 package `in`.crakcode.unittests.complete
 
-import `in`.crakcode.unittests.HomeRepo
-import `in`.crakcode.unittests.HomeRepoImplementation
+import `in`.crakcode.unittests.repo.HomeRepo
+import `in`.crakcode.unittests.repo.HomeRepoImplementation
 import `in`.crakcode.unittests.User
 import io.mockk.*
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import `in`.crakcode.unittests.usecases.UserUseCase
-import `in`.crakcode.unittests.viewmodel2.MainActivityViewModelWithUseCase
+import `in`.crakcode.unittests.viewmodel1.MainActivityViewModelWithUseCase
 
 class MainActivityWithUseCaseAndRepoTestComplete {
 
